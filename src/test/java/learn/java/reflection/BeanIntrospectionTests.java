@@ -7,13 +7,13 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Test;
 
-import learn.java.entity.Festival;
+import learn.java.entity.Person;
 
 public class BeanIntrospectionTests {
 
 	@Test
 	public void testProperties() throws IntrospectionException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		Festival fest = new Festival("Tech Week", 100);
+		Person fest = new Person("Tech Week", 100);
 		PropertyDescriptor[] propDesc = Introspector.getBeanInfo(fest.getClass()).getPropertyDescriptors();
 		for(PropertyDescriptor pd : propDesc){
 			System.out.println(String.format("%s - %s", pd.getName(), pd.getReadMethod().invoke(fest, new Object[]{})));
