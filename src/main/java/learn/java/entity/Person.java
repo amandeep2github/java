@@ -19,8 +19,20 @@ public class Person {
 	private Address primaryAddress;
 	private Address secondaryAddress;
 	private Gender gender;
-	
-	
-	
-	
+
+	public void setPersonId(String personId) {
+		this.personId = personId;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getPersonId() {
+		return personId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
 }

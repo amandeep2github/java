@@ -13,7 +13,7 @@ public class BeanIntrospectionTests {
 
 	@Test
 	public void testProperties() throws IntrospectionException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		Person fest = new Person("Tech Week", 100);
+		Person fest = new Person();
 		PropertyDescriptor[] propDesc = Introspector.getBeanInfo(fest.getClass()).getPropertyDescriptors();
 		for(PropertyDescriptor pd : propDesc){
 			System.out.println(String.format("%s - %s", pd.getName(), pd.getReadMethod().invoke(fest, new Object[]{})));
