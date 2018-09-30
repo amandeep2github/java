@@ -35,4 +35,12 @@ public class Person {
 	public String getFirstName() {
 		return firstName;
 	}
+
+    public void setPrimaryAddress(Address primaryAddress) {
+        this.primaryAddress = primaryAddress;
+    }
+
+    public Address getPrimaryAddress() {
+        return primaryAddress;
+    }
 }
